@@ -27,11 +27,12 @@
           <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
             <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'index' %}">Home</a>
             <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'about' %}">About</a>
+            <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'contact' %}">Contact</a>
             <div class="col-md-3 text-end">
               {% if request.get_full_path == "/" %}
-                <button type="button" class="btn btn-dark" onclick="javascript:animateScroll()" >Buy</button>
+                <button type="button" class="btn btn-grad" onclick="javascript:animateScroll()" >Buy</button>
               {% else %}
-                <a type="button" class="btn btn-dark" href="{% url 'index' %}" >Buy</a>
+                <a type="button" class="btn btn-grad" href="{% url 'index' %}" style="width: 52px;">Buy</a>
               {% endif %}
               </div>
           </nav>
@@ -58,3 +59,6 @@
 
   </body>
 </html>
+
+
+

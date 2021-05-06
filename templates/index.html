@@ -3,59 +3,70 @@
 
 {% block content %}
 
-<div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img src="{% static 'img/side.png' %}" class="d-block mx-lg-auto img-fluid" alt="DesktopMini FrontImage" width="700" height="600" loading="lazy">
-      </div>
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold lh-1 mb-3">The Silent Aluminum Desktop</h1>
-        <p class="lead">The Desktop Mini is a premium industrial-styled computer design for completely silent operation. Perfect for home office, video editing, sound mixing, and home theater use cases. Made with sandblasted aluminum in a clean silver or matte black.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <a class="btn btn-outline-secondary btn-lg px-4" onclick="javascript:animateScroll()">Take a look</a>
-        </div>
+<div class="container col-xxl-8 px-4 py-3">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="{% static 'img/side.png' %}" class="d-block mx-lg-auto img-fluid" alt="DesktopMini FrontImage"
+        width="700" height="600" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold lh-1 mb-3">The Silent Aluminum Desktop</h1>
+      <p class="lead">The Desktop Mini is a premium industrial-styled computer design for completely silent operation.
+        Perfect for home office, video editing, sound mixing, and home theater use cases. Made with sandblasted aluminum
+        in a clean silver or matte black.</p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-grad btn-lg px-4" onclick="javascript:animateScroll()">Take a look</a>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="container py-5" id="featured-3">
-    <h2 class="pb-2 border-bottom">Columns with icons</h2>
-    <div class="row g-5 py-5">
-      <div class="feature col-md-4">
-        <div class="feature-icon bg-primary bg-gradient">
-            <svg class="bi bi-volume-mute" xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-volume-mute" viewBox="0 0 16 16">
-              <path d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04 4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04zm7.854.606a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z"/>
-            </svg>
-          </svg>
-        </div>
-        <h2>Featured title</h2>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+{% for feature in product %}
+<div class="container" id="featured-3">
+  <h2 class="pb-2 border-bottom">Features</h2>
+  <div class="row g-5 py-5">
+    <div class="feature col-md-4">
+      <div class="feature-icon bg-copper-grad">
+        <svg class="bi bi-volume-mute" xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor"
+          class="bi bi-volume-mute" viewBox="0 0 16 16">
+          <path
+            d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04 4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04zm7.854.606a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z" />
+        </svg>
+        </svg>
       </div>
-      <div class="feature col-md-4">
-        <div class="feature-icon bg-primary bg-gradient">
-          <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-droplet-half" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10c0 0 2.5 1.5 5 .5s5-.5 5-.5c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"/>
-            <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z"/>
-          </svg>
-        </div>
-        <h2>Featured title</h2>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+      <h2>{{ feature.feature_1_title }}</h2>
+      <p>{{ feature.feature_1_content }}</p>
+    </div>
+    <div class="feature col-md-4">
+      <div class="feature-icon bg-copper-grad">
+        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-palette2"
+          viewBox="0 0 16 16">
+          <path
+            d="M0 .5A.5.5 0 0 1 .5 0h5a.5.5 0 0 1 .5.5v5.277l4.147-4.131a.5.5 0 0 1 .707 0l3.535 3.536a.5.5 0 0 1 0 .708L10.261 10H15.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5H3a2.99 2.99 0 0 1-2.121-.879A2.99 2.99 0 0 1 0 13.044m6-.21 7.328-7.3-2.829-2.828L6 7.188v5.647zM4.5 13a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0zM15 15v-4H9.258l-4.015 4H15zM0 .5v12.495V.5z" />
+          <path d="M0 12.995V13a3.07 3.07 0 0 0 0-.005z" />
+        </svg>
       </div>
-      <div class="feature col-md-4">
-        <div class="feature-icon bg-primary bg-gradient">
-          <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-wallet2" viewBox="0 0 16 16">
-            <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
-          </svg>
-        </div>
-        <h2>Featured title</h2>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+      <h2>{{ feature.feature_2_title }}</h2>
+      <p>{{ feature.feature_1_content }}</p>
+    </div>
+    <div class="feature col-md-4">
+      <div class="feature-icon bg-copper-grad">
+        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-wallet2"
+          viewBox="0 0 16 16">
+          <path
+            d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z" />
+        </svg>
       </div>
+      <h2>{{ feature.feature_3_title }}</h2>
+      <p>{{ feature.feature_1_content }}</p>
     </div>
   </div>
+</div>
+{% endfor %}
 
-  <div class="container col-md-12">
-    <div id='product-component-1620246106717'></div>
-    <script type="text/javascript">
+<div class="container col-md-12">
+  <div id='product-component-1620310479935'></div>
+  <script type="text/javascript">
     /*<![CDATA[*/
     (function () {
       var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
@@ -83,235 +94,227 @@
         ShopifyBuy.UI.onReady(client).then(function (ui) {
           ui.createComponent('product', {
             id: '6666610016454',
-            node: document.getElementById('product-component-1620246106717'),
+            node: document.getElementById('product-component-1620310479935'),
             moneyFormat: '%C2%A3%7B%7Bamount%7D%7D',
             options: {
-      "product": {
-        "styles": {
-          "product": {
-            "@media (min-width: 601px)": {
-              "max-width": "100%",
-              "margin-left": "0",
-              "margin-bottom": "50px"
+              "product": {
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0",
+                      "margin-bottom": "50px"
+                    },
+                    "text-align": "left"
+                  },
+                  "title": {
+                    "font-family": "Avant Garde, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "26px"
+                  },
+                  "button": {
+                    "font-family": "Avant Garde, sans-serif",
+                    "font-size": "18px",
+                    "padding-top": "17px",
+                    "padding-bottom": "17px",
+                    ":hover": {
+                      "background-color": "#000000"
+                    },
+                    "background-color": "#000000",
+                    ":focus": {
+                      "background-color": "#000000"
+                    },
+                    "border-radius": "15px",
+                    "padding-left": "93px",
+                    "padding-right": "93px"
+                  },
+                  "quantityInput": {
+                    "font-size": "18px",
+                    "padding-top": "17px",
+                    "padding-bottom": "17px"
+                  },
+                  "price": {
+                    "font-family": "Avant Garde, sans-serif",
+                    "font-size": "23px"
+                  },
+                  "compareAt": {
+                    "font-family": "Avant Garde, sans-serif",
+                    "font-size": "19.55px"
+                  },
+                  "unitPrice": {
+                    "font-family": "Avant Garde, sans-serif",
+                    "font-size": "19.55px"
+                  },
+                  "description": {
+                    "font-family": "Avant Garde, sans-serif",
+                    "font-size": "16px",
+                    "color": "#000000"
+                  }
+                },
+                "layout": "horizontal",
+                "contents": {
+                  "img": false,
+                  "imgWithCarousel": true,
+                  "description": true
+                },
+                "width": "100%",
+                "text": {
+                  "button": "Add to Bag"
+                }
+              },
+              "productSet": {
+                "styles": {
+                  "products": {
+                    "@media (min-width: 601px)": {
+                      "margin-left": "-20px"
+                    }
+                  }
+                }
+              },
+              "modalProduct": {
+                "contents": {
+                  "img": false,
+                  "imgWithCarousel": true,
+                  "button": false,
+                  "buttonWithQuantity": true
+                },
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0px",
+                      "margin-bottom": "0px"
+                    }
+                  },
+                  "button": {
+                    "font-family": "Avant Garde, sans-serif",
+                    "font-size": "18px",
+                    "padding-top": "17px",
+                    "padding-bottom": "17px",
+                    ":hover": {
+                      "background-color": "#000000"
+                    },
+                    "background-color": "#000000",
+                    ":focus": {
+                      "background-color": "#000000"
+                    },
+                    "border-radius": "15px",
+                    "padding-left": "93px",
+                    "padding-right": "93px"
+                  },
+                  "quantityInput": {
+                    "font-size": "18px",
+                    "padding-top": "17px",
+                    "padding-bottom": "17px"
+                  },
+                  "title": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "26px",
+                    "color": "#4c4c4c"
+                  },
+                  "price": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "18px",
+                    "color": "#4c4c4c"
+                  },
+                  "compareAt": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "15.299999999999999px",
+                    "color": "#4c4c4c"
+                  },
+                  "unitPrice": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "15.299999999999999px",
+                    "color": "#4c4c4c"
+                  },
+                  "description": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "14px",
+                    "color": "#4c4c4c"
+                  }
+                },
+                "text": {
+                  "button": "Add to cart"
+                }
+              },
+              "option": {
+                "styles": {
+                  "label": {
+                    "font-family": "Avant Garde, sans-serif",
+                    "font-size": "17px"
+                  },
+                  "select": {
+                    "font-family": "Avant Garde, sans-serif"
+                  }
+                },
+                "googleFonts": [
+                  "Lato"
+                ]
+              },
+              "cart": {
+                "styles": {
+                  "button": {
+                    "font-family": "Avant Garde, sans-serif",
+                    "font-size": "18px",
+                    "padding-top": "17px",
+                    "padding-bottom": "17px",
+                    ":hover": {
+                      "background-color": "#000000"
+                    },
+                    "background-color": "#000000",
+                    ":focus": {
+                      "background-color": "#000000"
+                    },
+                    "border-radius": "15px"
+                  }
+                },
+                "text": {
+                  "title": "Bag",
+                  "total": "Subtotal",
+                  "button": "Checkout"
+                },
+                "popup": false
+              },
+              "toggle": {
+                "styles": {
+                  "toggle": {
+                    "font-family": "Avant Garde, sans-serif",
+                    "background-color": "#000000",
+                    ":hover": {
+                      "background-color": "#000000"
+                    },
+                    ":focus": {
+                      "background-color": "#000000"
+                    }
+                  },
+                  "count": {
+                    "font-size": "18px"
+                  }
+                }
+              }
             },
-            "text-align": "left"
-          },
-          "title": {
-            "font-family": "Lato, sans-serif",
-            "font-size": "26px"
-          },
-          "button": {
-            "font-family": "Lato, sans-serif",
-            "font-size": "18px",
-            "padding-top": "17px",
-            "padding-bottom": "17px",
-            ":hover": {
-              "background-color": "#000000"
-            },
-            "background-color": "#000000",
-            ":focus": {
-              "background-color": "#000000"
-            },
-            "border-radius": "5px",
-            "padding-left": "93px",
-            "padding-right": "93px"
-          },
-          "quantityInput": {
-            "font-size": "18px",
-            "padding-top": "17px",
-            "padding-bottom": "17px"
-          },
-          "price": {
-            "font-family": "Lato, sans-serif",
-            "font-size": "23px"
-          },
-          "compareAt": {
-            "font-family": "Lato, sans-serif",
-            "font-size": "19.55px"
-          },
-          "unitPrice": {
-            "font-family": "Lato, sans-serif",
-            "font-size": "19.55px"
-          },
-          "description": {
-            "font-family": "Lato, sans-serif",
-            "color": "#000000"
-          }
-        },
-        "layout": "horizontal",
-        "contents": {
-          "img": false,
-          "imgWithCarousel": true,
-          "description": true
-        },
-        "width": "100%",
-        "text": {
-          "button": "Add to cart"
-        },
-        "googleFonts": [
-          "Lato"
-        ]
-      },
-      "productSet": {
-        "styles": {
-          "products": {
-            "@media (min-width: 601px)": {
-              "margin-left": "-20px"
-            }
-          }
-        }
-      },
-      "modalProduct": {
-        "contents": {
-          "img": false,
-          "imgWithCarousel": true,
-          "button": false,
-          "buttonWithQuantity": true
-        },
-        "styles": {
-          "product": {
-            "@media (min-width: 601px)": {
-              "max-width": "100%",
-              "margin-left": "0px",
-              "margin-bottom": "0px"
-            }
-          },
-          "button": {
-            "font-family": "Lato, sans-serif",
-            "font-size": "18px",
-            "padding-top": "17px",
-            "padding-bottom": "17px",
-            ":hover": {
-              "background-color": "#000000c2"
-            },
-            "background-color": "#000000",
-            ":focus": {
-              "background-color": "#000000"
-            },
-            "border-radius": "5px",
-            "padding-left": "93px",
-            "padding-right": "93px"
-          },
-          "quantityInput": {
-            "font-size": "18px",
-            "padding-top": "17px",
-            "padding-bottom": "17px"
-          },
-          "title": {
-            "font-family": "Helvetica Neue, sans-serif",
-            "font-weight": "bold",
-            "font-size": "26px",
-            "color": "#4c4c4c"
-          },
-          "price": {
-            "font-family": "Helvetica Neue, sans-serif",
-            "font-weight": "normal",
-            "font-size": "18px",
-            "color": "#4c4c4c"
-          },
-          "compareAt": {
-            "font-family": "Helvetica Neue, sans-serif",
-            "font-weight": "normal",
-            "font-size": "15.299999999999999px",
-            "color": "#4c4c4c"
-          },
-          "unitPrice": {
-            "font-family": "Helvetica Neue, sans-serif",
-            "font-weight": "normal",
-            "font-size": "15.299999999999999px",
-            "color": "#4c4c4c"
-          },
-          "description": {
-            "font-family": "Helvetica Neue, sans-serif",
-            "font-weight": "normal",
-            "font-size": "14px",
-            "color": "#4c4c4c"
-          }
-        },
-        "googleFonts": [
-          "Lato"
-        ],
-        "text": {
-          "button": "Add to cart"
-        }
-      },
-      "option": {
-        "styles": {
-          "label": {
-            "font-family": "Lato, sans-serif",
-            "font-size": "17px"
-          },
-          "select": {
-            "font-family": "Lato, sans-serif"
-          }
-        },
-        "googleFonts": [
-          "Lato"
-        ]
-      },
-      "cart": {
-        "styles": {
-          "button": {
-            "font-family": "Lato, sans-serif",
-            "font-size": "18px",
-            "padding-top": "17px",
-            "padding-bottom": "17px",
-            ":hover": {
-              "background-color": "#000000"
-            },
-            "background-color": "#000000",
-            ":focus": {
-              "background-color": "#000000"
-            },
-            "border-radius": "5px"
-          }
-        },
-        "text": {
-          "total": "Subtotal",
-          "button": "Checkout"
-        },
-        "googleFonts": [
-          "Lato"
-        ]
-      },
-      "toggle": {
-        "styles": {
-          "toggle": {
-            "font-family": "Lato, sans-serif",
-            "background-color": "#000000",
-            ":hover": {
-              "background-color": "#000000"
-            },
-            ":focus": {
-              "background-color": "#000000"
-            }
-          },
-          "count": {
-            "font-size": "18px"
-          }
-        },
-        "googleFonts": [
-          "Lato"
-        ]
-      }
-    },
           });
         });
       }
     })();
-    /*]]>*/
-    </script>
-  </div>
+/*]]>*/
+  </script>
+</div>
 
 
 
 
 
 <script type="text/javascript">
-    function animateScroll() {
-        window.scroll({ top: 1000, left: 0, behavior: 'smooth' });
-    }
+  function animateScroll() {
+    window.scroll({ top: 1000, left: 0, behavior: 'smooth' });
+  }
 </script>
-  
+
 
 {% endblock content %}
