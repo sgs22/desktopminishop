@@ -12,6 +12,12 @@ class ProductDetail(models.Model):
     colour = models.CharField(max_length=120, blank=True)
     connectivity = models.CharField(max_length=120, blank=True)
     features = models.CharField(max_length=120, blank=True)
+    feature_1_title = models.CharField(max_length=120, blank=True)
+    feature_1_content = models.TextField(max_length=120, blank=True)
+    feature_2_title = models.CharField(max_length=120, blank=True)
+    feature_2_content = models.TextField(max_length=120, blank=True)
+    feature_3_title = models.CharField(max_length=120, blank=True)
+    feature_3_content = models.TextField(max_length=120, blank=True)
     storage_type = models.CharField(max_length=120, blank=True)
     form_factor = models.CharField(max_length=120, blank=True)
     memory_type = models.CharField(max_length=120, blank=True)
@@ -34,3 +40,16 @@ class ProductDetail(models.Model):
     def __str__(self):
         return self.name
 
+class About(models.Model):
+    card_main_title = models.CharField(max_length=120, blank=False) 
+    card_main_content = models.TextField(max_length=500, blank=True)
+    card_left_title = models.CharField(max_length=120, blank=False) 
+    card_left_content = models.TextField(max_length=500, blank=True)
+    card_right_title = models.CharField(max_length=120, blank=False) 
+    card_right_content = models.TextField(max_length=500, blank=True)
+
+    class Meta:
+        verbose_name = "About Page"
+
+    def __str__(self):
+        return self.card_main_title
