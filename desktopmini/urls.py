@@ -19,12 +19,13 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from shop.views import shop_view, about_view
+from shop.views import shop_view, about_view, contact_view
 
 urlpatterns = [
     path('', shop_view, name='index'),
     path('about/', about_view, name='about'),
-    path('admin/', admin.site.urls),
+    path('contact/', contact_view, name='contact'),
+    path('cpanel/', admin.site.urls),
 ]
 
 if settings.DEBUG:
