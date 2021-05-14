@@ -51,6 +51,8 @@ class About(models.Model):
     card_right_title = models.CharField(max_length=120, blank=False) 
     card_right_content = models.TextField(max_length=500, blank=True)
 
+
+
     class Meta:
         verbose_name = "About Panel"
 
