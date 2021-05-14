@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import environ
+
+env = environ.Env()
+# reading .env file
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ez7)6$3d-8r+vsd#hjr!$nz+^*4hc4wy4cz!!skp1z12-t6-(r'
+SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -134,3 +139,6 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STRIPE_PUBLIC_KEY = "pk_test_51Ir0syGCqOfTY5QU1LtV6cLgZEMIm99WKC17hvQeo0UeCO2vVIBaAMnfYDIeUdc7ibRgMLDTajDPBTurY3SbhDWy00AvhquvqO"
+STRIPE_SECRET_KEY = "sk_test_51Ir0syGCqOfTY5QUzBzfXtk3SQhJlHyPQbjjNxsufbJLEIhXLX3uajsbh6cyS9mNPgz7Sdwvnhk7JE1yHH9wp1zc006Ll2M2AV"
