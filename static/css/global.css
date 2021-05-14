@@ -51,7 +51,7 @@ body {
   background-color: #b87333;
 }
 
-.bg-copper-grad {background-image: linear-gradient(to right, #b87333 55%, #ffb570  100%)}
+.bg-copper-grad {background-image: linear-gradient(to right, #b87333 0%, #ffb570  100%)}
 
 .btn-grad {background-image: linear-gradient(to right, #b87333 0%, #ffb570  51%, #b87333  100%)}
 
