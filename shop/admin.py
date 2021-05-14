@@ -1,6 +1,14 @@
 from django.contrib import admin
 
-from .models import ProductDetail, About
+from .models import ProductDetail, ProductGallery, About
 
-admin.site.register(ProductDetail)
+class ImagesInline(admin.TabularInline):
+  model = ProductGallery
+
+class ProductAdmin(admin.ModelAdmin):
+  inlines = [
+    ImagesInline,
+  ]
+
+admin.site.register(ProductDetail, ProductAdmin)
 admin.site.register(About)
