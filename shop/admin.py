@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import ProductDetail, ProductGallery, About
+from .models import Product, ProductGallery, About
 
 class ImagesInline(admin.TabularInline):
   model = ProductGallery
@@ -10,5 +10,5 @@ class ProductAdmin(admin.ModelAdmin):
     ImagesInline,
   ]
 
-admin.site.register(ProductDetail, ProductAdmin)
+admin.site.register(Product, ProductAdmin)
 admin.site.register(About)

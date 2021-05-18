@@ -17,15 +17,27 @@ from django.contrib import admin
 from django.urls import path
 
 from django.conf import settings
-from django.conf.urls.static import static
+from django.conf.urls.static import static 
 
-from shop.views import shop_view, about_view, contact_view
+from shop.views import (
+    shop_view,
+    product_overview,
+    about_view,
+    contact_view,
+    # CreateCheckoutSessionView,
+    SuccessView,
+    CancelView,
+)
 
 urlpatterns = [
     path('', shop_view, name='index'),
+    path('desktopmini/', product_overview, name='overview'),
     path('about/', about_view, name='about'),
     path('contact/', contact_view, name='contact'),
     path('cpanel/', admin.site.urls),
+    path('cancel/', CancelView.as_view(), name='cancel'),
+    path('success/', SuccessView.as_view(), name='success'),
+    # path('create-checkout-session/<pk>/', CreateCheckoutSessionView.as_view(), name='create-checkout-session')
 ]
 
 if settings.DEBUG:
