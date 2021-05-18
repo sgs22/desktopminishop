@@ -12,13 +12,17 @@
     <!-- Charts CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css" rel="stylesheet">
 
+    <script src="https://js.stripe.com/v3/"></script>
     {% load static %}
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon.ico' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon.ico' %}">
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'js/global.js' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/imageslider.css' %}">
+    <link type="text/javascript" href="{% static 'js/global.js' %}">
+    <link type="text/javascript" href="{% static 'js/slider.js' %}">
+    <link type="text/javascript" href="{% static 'js/zoom.js' %}">
     <title>Desktop Mini</title>
   </head>
   <body>
@@ -37,11 +41,7 @@
             <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'about' %}">About</a>
             <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'contact' %}">Contact</a>
             <div class="col-md-3 text-end">
-              {% if request.get_full_path == "/" %}
-                <button type="button" class="btn btn-grad" onclick="javascript:animateScroll()" >Buy</button>
-              {% else %}
-                <a type="button" class="btn btn-grad" href="{% url 'index' %}" style="width: 52px;">Buy</a>
-              {% endif %}
+                <a type="button" class="btn btn-grad" href="{% url 'overview' %}" style="width: 52px;">Buy</a>
               </div>
           </nav>
         </header>
@@ -59,7 +59,7 @@
 
     <footer class="footer mt-auto py-3 bg-light">
       <div class="container">
-        <span class="text-muted">Desktop Mini. All Rights Reserved. Shopify Checkout ©</span>
+        <span class="text-muted">Desktop Mini. All Rights Reserved. Stripe Checkout ©</span>
       </div>
     </footer>
     <!-- Option 1: Bootstrap Bundle with Popper -->

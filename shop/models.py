@@ -1,9 +1,10 @@
 from django.db import models
 
-class ProductDetail(models.Model):
+class Product(models.Model):
     name = models.CharField(max_length=120, blank=False) 
     price = models.DecimalField(max_digits=6, decimal_places=2)
     description = models.TextField(max_length=300, blank=True)
+    featured_img = models.ImageField(upload_to='products/images/', blank=True)
     release_year = models.CharField(max_length=120, blank=True)
     dimensions = models.CharField(max_length=120, blank=True)
     model_number = models.CharField(max_length=120, blank=True)
@@ -24,12 +25,6 @@ class ProductDetail(models.Model):
     weight = models.CharField(max_length=120, blank=True)
     updated = models.DateTimeField(auto_now=True) 
     timestamp = models.DateTimeField(auto_now_add=True) 
-    feature_1_title = models.CharField(max_length=120, blank=True)
-    feature_1_content = models.TextField(max_length=120, blank=True)
-    feature_2_title = models.CharField(max_length=120, blank=True)
-    feature_2_content = models.TextField(max_length=120, blank=True)
-    feature_3_title = models.CharField(max_length=120, blank=True)
-    feature_3_content = models.TextField(max_length=120, blank=True)
 
     class Meta:
         ordering = ['name'] 
@@ -39,9 +34,27 @@ class ProductDetail(models.Model):
     def __str__(self):
         return self.name
 
+    @property
+    def imageUrl(self):
+        try:
+            url = self.featured_img.url
+        except:
+            url = ''
+        print('URL:', url)
+        return url
+
 class ProductGallery(models.Model):
     image = models.ImageField(u'images', upload_to='products/images/', blank=True)
-    products = models.ForeignKey('ProductDetail', blank=True, null=True, on_delete=models.CASCADE)
+    products = models.ForeignKey('Product', blank=True, null=True, on_delete=models.CASCADE)
+
+    @property
+    def imageUrl(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        print('URL:', url)
+        return url
 
 class About(models.Model):
     card_main_title = models.CharField(max_length=120, blank=False) 
@@ -50,8 +63,6 @@ class About(models.Model):
     card_left_content = models.TextField(max_length=500, blank=True)
     card_right_title = models.CharField(max_length=120, blank=False) 
     card_right_content = models.TextField(max_length=500, blank=True)
-
-
 
     class Meta:
         verbose_name = "About Panel"
