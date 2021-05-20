@@ -70,7 +70,7 @@
 }
 
 #lens {
-    display: block;
+    display: none;
     z-index: 2;
     position: absolute;
     height: 200px;
