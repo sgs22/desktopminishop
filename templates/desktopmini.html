@@ -3,31 +3,6 @@
 
 {% block content %}
 
-<!-- <div class="container col-xxl-10 pt-4">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-lg-4">
-            <h1 class="display-5 fw-bold lh-1 mb-3">Order Today</h1>
-            <p class="lead">The Desktop Mini is a premium industrial-styled computer design for completely silent
-                operation.
-                Perfect for home office, video editing, sound mixing, and home theater use cases. Made with sandblasted
-                aluminum
-                in a clean silver or matte black.</p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <a class="btn btn-grad btn-lg px-4" onclick="javascript:animateScroll()">Buy</a>
-            </div>
-        </div>
-        <div class="col-lg-8">
-            <div class="card" style="padding:30px;">
-                <img src="{% static 'img/desktopmini_horizontal.png' %}" class="d-block mx-lg-auto img-fluid"
-                    alt="DesktopMini FrontImage" width="700" height="600" loading="lazy">
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
 <div id="content-wrapper">
     
     <div class="column">
@@ -61,6 +36,41 @@
     </div>
 
 </div>
+
+<div class="container col-xxl-8 px-4">
+    <div class="row flex-lg-row align-items-center g-5 py-5">
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Specifications:</h1>
+        <p class="lead">Model:</p>
+        <div class="justify-content-center">
+            <a class="btn btn-grad-2 btn-lg" href="#" style="display: inline;">6-Core</a>
+            <a class="btn btn-grad-2 btn-lg" href="#" style="display: inline;">8-Core</a>
+        </div>
+      </div>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Feature</th>
+            <th scope="col">Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">CPU</th>
+            <td>i5 11th Gen</td>
+          </tr>
+          <tr>
+            <th scope="row">Storage</th>
+            <td>256GB </td>
+          </tr>
+          <tr>
+            <th scope="row">Memory</th>
+            <td>8GB DDR4</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
 <script type="text/javascript" src="{% static 'js/slider.js' %}" ></script>
 <script type="text/javascript" src="{% static 'js/zoom.js' %}" ></script>
