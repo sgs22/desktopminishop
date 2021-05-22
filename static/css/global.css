@@ -109,6 +109,15 @@ body {
    text-decoration: none;
  }
 
+ #bar-perf {
+  --labels-size: 100px;
+  border-radius: 100px;
+  height: 150px;
+  max-width: 600px;
+  margin: 0 auto;
+  --color: linear-gradient(to right, #b87333 0%, #ffb570 100%);
+}
+
  /* Gallery CSS */
   *{
     box-sizing: border-box;
