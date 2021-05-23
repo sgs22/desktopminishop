@@ -29,7 +29,7 @@
         <hr>
         <h3>£{{product.price}}</h3>
 
-        <p>{{product.description}}</p>
+        <p>{{product.description|linebreaks }}</p>
 
         <input value="1" type="number">
         <a class="btn btn-grad btn-lg" href="#" style="display: inline;">Add to Bag</a>
@@ -47,25 +47,74 @@
             <a class="btn btn-grad-2 btn-lg" href="#" style="display: inline;">8-Core</a>
         </div>
       </div>
-      <table class="table table-hover">
+      <table class="table table-hover table-responsive align-middle">
         <thead>
           <tr>
             <th scope="col">Feature</th>
             <th scope="col">Detail</th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
           <tr>
+            <th scope="row">Finish</th>
+            <td>{{product.finish}}</td>
+          </tr>
+          <tr>
             <th scope="row">CPU</th>
-            <td>i5 11th Gen</td>
+            <td>{{product.processor}}</td>
           </tr>
           <tr>
             <th scope="row">Storage</th>
-            <td>256GB </td>
+            <td>{{product.storage}}</td>
           </tr>
           <tr>
             <th scope="row">Memory</th>
-            <td>8GB DDR4</td>
+            <td>{{product.memory}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Video Support</th>
+            <td>{{product.video_support|linebreaks }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Audio</th>
+            <td>{{product.audio|linebreaks }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Connection</th>
+            <td>{{product.connections|linebreaks }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Communications</th>
+            <td>{{product.communications|linebreaks }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Height</th>
+            <td>{{product.height}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Width</th>
+            <td>{{product.width}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Depth</th>
+            <td>{{product.depth}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Weight</th>
+            <td>{{product.weight}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Warranty</th>
+            <td>{{product.warranty|linebreaks }}</td>
+          </tr>
+          <tr>
+            <th scope="row">In The Box</th>
+            <td>{{product.in_the_box|linebreaks }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Operating System</th>
+            <td>{{product.operating_system|linebreaks }}</td>
           </tr>
         </tbody>
       </table>
