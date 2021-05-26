@@ -31,8 +31,12 @@
 
         <p>{{product.description|linebreaks }}</p>
 
-        <input value="1" type="number">
-        <a class="btn btn-grad btn-lg" href="#" style="display: inline;">Add to Bag</a>
+        <!-- <input value="1" type="number"> -->
+        <select class="form-select mb-4" aria-label="Default select example" style="width: 50%;">
+          <option selected>8GB Memory / 256GB Storage</option>
+          <option value="1">16GB Memory / 512GB Storage (Coming Soon)</option>
+        </select>
+        <button class="btn btn-grad btn-lg" href="#" id="checkout-button" style="display: inline;">Purchase</button>
     </div>
 
 </div>
@@ -41,11 +45,11 @@
     <div class="row flex-lg-row align-items-center g-5 py-5">
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold lh-1 mb-3">Specifications:</h1>
-        <p class="lead">Model:</p>
+        <!-- <p class="lead">Model:</p>
         <div class="justify-content-center">
             <a class="btn btn-grad-2 btn-lg" href="#" style="display: inline;">6-Core</a>
             <a class="btn btn-grad-2 btn-lg" href="#" style="display: inline;">8-Core</a>
-        </div>
+        </div> -->
       </div>
       <table class="table table-hover table-responsive align-middle">
         <thead>
@@ -123,5 +127,34 @@
 
 <script type="text/javascript" src="{% static 'js/slider.js' %}" ></script>
 <script type="text/javascript" src="{% static 'js/zoom.js' %}" ></script>
+
+<script src="https://js.stripe.com/v3/"></script>
+
+<script type="text/javascript">
+  // Create an instance of the Stripe object with your publishable API key
+  var stripe = Stripe("pk_test_51Ir0syGCqOfTY5QU1LtV6cLgZEMIm99WKC17hvQeo0UeCO2vVIBaAMnfYDIeUdc7ibRgMLDTajDPBTurY3SbhDWy00AvhquvqO");
+  var checkoutButton = document.getElementById("checkout-button");
+  checkoutButton.addEventListener("click", function () {
+    fetch('/checkout/')
+    .then(function (result) { return result.json() })
+    .then(function (data) {
+      var stripe = Stripe(data.stripe_public_key);
+
+      stripe.redirectToCheckout({
+        sessionId: data.checkout_session_id
+      }).then(function (result) {
+        // If redirectToCheckout fails due to a browser or network
+        // error, you should display the localized error message to your
+        // customer using error.message.
+        if (result.error) {
+          alert(result.error.message);
+        }
+      })
+        .catch(function (error) {
+          console.error("Error:", error);
+        });
+    })
+  })
+</script>
 
 {% endblock content %}
