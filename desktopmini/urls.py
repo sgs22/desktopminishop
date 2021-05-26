@@ -24,9 +24,10 @@ from shop.views import (
     product_overview,
     about_view,
     contact_view,
-    # CreateCheckoutSessionView,
     SuccessView,
+    success_view,
     CancelView,
+    checkout_view
 )
 
 urlpatterns = [
@@ -36,8 +37,9 @@ urlpatterns = [
     path('contact/', contact_view, name='contact'),
     path('cpanel/', admin.site.urls),
     path('cancel/', CancelView.as_view(), name='cancel'),
-    path('success/', SuccessView.as_view(), name='success'),
-    # path('create-checkout-session/<pk>/', CreateCheckoutSessionView.as_view(), name='create-checkout-session')
+    #path('success/', SuccessView.as_view(), name='success'),
+    path('success/', success_view, name='success'),
+    path('checkout/', checkout_view, name='checkout')
 ]
 
 if settings.DEBUG:
