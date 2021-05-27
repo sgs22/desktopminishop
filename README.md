@@ -1,6 +1,6 @@
-# desktopminishop - Django / Shopify Payments
+# desktopminishop - Django / Stripe Payments
 
-### System Integrator Webssite selling a premium desktop computer, built using django python framework and shopify payments for order/checkout 
+### System Integrator Website selling a premium desktop computer, built using django python framework and stripe for order/checkout 
 
 ### TODO:
     - Add media
