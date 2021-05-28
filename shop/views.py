@@ -26,8 +26,8 @@ def about_view(request, *args, **kwargs):
     queryset = About.objects.all()
     return render(request, "about.html", {"about": queryset})
 
-def contact_view(request, *args, **kwargs):
-    return render(request, "contact.html")
+def support_view(request, *args, **kwargs):
+    return render(request, "support.html")
 
 class SuccessView(TemplateView):
     template_name = "success.html"
