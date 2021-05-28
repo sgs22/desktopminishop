@@ -12,7 +12,6 @@ import stripe
 import json
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
-YOUR_DOMAIN = 'http://localhost:8000'
 
 def shop_view(request, *args, **kwargs):
     product = Product.objects.first()
