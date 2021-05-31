@@ -45,7 +45,7 @@ class CancelView(TemplateView):
 
 @csrf_exempt
 def checkout_view(request):
-    product = Product.objects.first()
+    product = Product.objects.first() #make this product change on selection!
     checkout_session = stripe.checkout.Session.create(
     payment_method_types=['card'],
     shipping_rates=['shr_1IvOERGCqOfTY5QUfjaaXvRf'],
