@@ -29,12 +29,19 @@
         <h3>£{{product.price}}</h3>
 
         <p>{{product.description|linebreaks }}</p>
-
-        <!-- <input value="1" type="number"> -->
+        <h4>Finish:</h4>
         <select class="form-select mb-4" aria-label="Default select example" style="width: 50%;">
+          <option selected>Clean Silver</option>
+          <option value="1">Matte Black</option>
+        </select>
+        <h4>Configuration:</h4>
+        <!-- <input value="1" type="number"> -->
+        <select id="finishSelect" class="form-select mb-4" aria-label="finsh selct" style="width: 50%;">
           <option selected>8GB Memory / 256GB Storage</option>
           <option value="1">16GB Memory / 512GB Storage</option>
         </select>
+        
+        <a href="https://buy.stripe.com/test_4gwaGx4wfh0HfC08ww">Test Checkout</a>
         <button class="btn btn-grad btn-lg" href="#" id="checkout-button" style="visibility:visible;">Purchase</button>
     </div>
 
@@ -44,11 +51,7 @@
     <div class="row flex-lg-row align-items-center g-5 py-5">
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold lh-1 mb-3">Specifications:</h1>
-        <!-- <p class="lead">Model:</p>
-        <div class="justify-content-center">
-            <a class="btn btn-grad-2 btn-lg" href="#" style="display: inline;">6-Core</a>
-            <a class="btn btn-grad-2 btn-lg" href="#" style="display: inline;">8-Core</a>
-        </div> -->
+
       </div>
       <table class="table table-hover table-responsive align-middle">
         <thead>
