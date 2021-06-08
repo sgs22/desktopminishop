@@ -1,12 +1,12 @@
 #content-wrapper {
-    display: flex;
+    display:flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
 .column {
-    width: 800px;
+    width: 750px;
     padding: 10px;
 }
 
