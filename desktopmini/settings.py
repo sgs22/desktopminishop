@@ -131,6 +131,10 @@ STATIC_URL = '/static/'
 #     '/home/sgs/Dev/desktopmini/static',
 #     ]
 
+STATICFILES_DIRS = (
+    BASE_DIR / "static",
+)
+
 MEDIA_URL= '/media/'
 MEDIA_ROOT = BASE_DIR / "media_cdn"
 STATIC_ROOT = BASE_DIR / "static"
