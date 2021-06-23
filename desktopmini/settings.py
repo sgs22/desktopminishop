@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary',
+    'cloudinary_storage',
     'shop',
 ]
 
@@ -140,6 +142,8 @@ MEDIA_URL= '/media/'
 MEDIA_ROOT = BASE_DIR / "media_cdn"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -147,3 +151,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STRIPE_PUBLIC_KEY = env("STRIPE_PUBLIC_KEY")
 STRIPE_SECRET_KEY = env("STRIPE_SECRET_KEY")
+
+# cloudinary
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'hze2x6gfv',
+    'API_KEY': '812824871134732',
+    'API_SECRET': 't10VHjhTIYw0PfhnuYVyfxxCap4',
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
