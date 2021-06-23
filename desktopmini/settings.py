@@ -155,9 +155,9 @@ STRIPE_SECRET_KEY = env("STRIPE_SECRET_KEY")
 # cloudinary
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'hze2x6gfv',
-    'API_KEY': '812824871134732',
-    'API_SECRET': 't10VHjhTIYw0PfhnuYVyfxxCap4',
+    'CLOUD_NAME': env('CLOUD_NAME'),
+    'API_KEY': env('API_KEY'),
+    'API_SECRET': env('API_SECRET'),
 }
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
