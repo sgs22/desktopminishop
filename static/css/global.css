@@ -1,6 +1,13 @@
 /**
     SCROLL BAR
 */
+
+/* Remove Horizontal scrolling */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
