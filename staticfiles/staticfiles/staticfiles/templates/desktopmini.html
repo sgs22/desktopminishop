@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="mt-5"id="content-wrapper">
+    <div class="column">
+        <div id="img-container">
+            <div id="lens"></div>
+            <img id =featured src="{{product.imageUrl}}">
+        </div>
+
+        <div id="slide-wrapper">
+            <i id="slideLeft" class="arrow bi bi-arrow-left-circle" style="font-size: 1.5rem;"></i>
+            <div id="slider">
+                {% for image in product.productgallery_set.all %}
+
+                <img class="thumbnail" src="{{image.imageUrl}}">
+
+                {% endfor %}
+            </div>
+            <i id="slideRight" class="arrow bi bi-arrow-right-circle" style="font-size: 1.5rem;"></i>
+        </div>
+    </div>
+
+    <div class="column mb-5 pb-5">
+        <h1>{{product}}</h1>
+        <hr>
+        <h3>Starting from £{{product.price}}</h3>
+
+        <p>{{product.description|linebreaks }}</p>
+        <h4>Finish:</h4>
+        <!-- <button class="btn btn-grad btn-lg" href="#" id="checkout-button" style="visibility:visible;">Purchase</button> -->
+        <select id="mySelect" class="form-select mb-4" onchange="finishSelectFunction()"aria-label="selectedFinish" style="width: 50%;">
+          <option value=""selected>--Select Finish--</option>
+          <option value="silver">Clean Silver</option>
+          <option value="black">Matte Black</option>
+        </select>
+        <a id="black" href="google.com" style="display: none;">black</a>
+        <div id="silverConfig" style=" display: none;">
+          <h4>Configuration:</h4>
+          <select id="silverSelect"class="form-select mb-4" onchange="silverSelectFunction()" aria-label="finsh selct" style="width: 50%;">
+            <option value=""selected>--Select Memory/Storage--</option>
+            <option value="silver-8-256">8GB Memory / 256GB Storage</option>
+            <option value="silver-16-512">16GB Memory / 512GB Storage</option>
+          </select>
+          <a class="btn btn-grad btn-lg" id="silver-8-256" href="https://buy.stripe.com/bIY8wH5ep31AbXq000" style="display: none;">Add to Checkout</a>
+          <a class="btn btn-grad btn-lg" id="silver-16-512" href="https://buy.stripe.com/00g28jeOZ9pYf9C5kl" style="display: none;">Add to Checkout</a>
+        </div>
+        <div id="blackConfig" style=" display: none;">
+          <h4>Configuration:</h4>
+          <select id="blackSelect"class="form-select mb-4" onchange="blackSelectFunction()" aria-label="finsh selct" style="width: 50%;">
+            <option value=""selected>--Select Memory/Storage--</option>
+            <option value="black-8-256">8GB Memory / 256GB Storage</option>
+            <option value="black-16-512">16GB Memory / 512GB Storage</option>
+          </select>
+          <a class="btn btn-grad btn-lg" id="black-8-256" href="https://buy.stripe.com/4gw6oz8qB6dM7Ha5km" style="display: none;">Add to Checkout</a>
+          <a class="btn btn-grad btn-lg" id="black-16-512" href="https://buy.stripe.com/14kfZ922d59IbXqaEH" style="display: none;">Add to Checkout</a>
+        </div>
+        <a class="btn btn-grad btn-lg disabled" id="disabledbtn" href="" style="display: inline-block;" disabled>Add to Checkout</a>
+        <small style="display: block; padding-top: 10px;">Quantity can be changed at checkout.</small>
+    </div>
+  </div>  
+</div>
+
+<div class="container col-xxl-8 px-4">
+    <div class="row flex-lg-row align-items-center g-5 py-5">
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Specifications:</h1>
+
+      </div>
+      <table class="table table-hover table-responsive align-middle">
+        <thead>
+          <tr>
+            <th scope="col">Feature</th>
+            <th scope="col">Detail</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Finish</th>
+            <td>{{product.finish}}</td>
+          </tr>
+          <tr>
+            <th scope="row">CPU</th>
+            <td>{{product.processor}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Storage</th>
+            <td>{{product.storage}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Memory</th>
+            <td>{{product.memory}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Video Support</th>
+            <td>{{product.video_support|linebreaks }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Audio</th>
+            <td>{{product.audio|linebreaks }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Connection</th>
+            <td>{{product.connections|linebreaks }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Communications</th>
+            <td>{{product.communications|linebreaks }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Height</th>
+            <td>{{product.height}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Width</th>
+            <td>{{product.width}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Depth</th>
+            <td>{{product.depth}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Weight</th>
+            <td>{{product.weight}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Warranty</th>
+            <td>{{product.warranty|linebreaks }}</td>
+          </tr>
+          <tr>
+            <th scope="row">In The Box</th>
+            <td>{{product.in_the_box|linebreaks }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Operating System</th>
+            <td>{{product.operating_system|linebreaks }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<script type="text/javascript" src="{% static 'js/slider.js' %}" ></script>
+<script type="text/javascript" src="{% static 'js/zoom.js' %}" ></script>
+
+<script src="https://js.stripe.com/v3/"></script>
+
+<script type="text/javascript">
+  // Create an instance of the Stripe object with your publishable API key
+  var stripe = Stripe("pk_test_51Ir0syGCqOfTY5QU1LtV6cLgZEMIm99WKC17hvQeo0UeCO2vVIBaAMnfYDIeUdc7ibRgMLDTajDPBTurY3SbhDWy00AvhquvqO");
+  var checkoutButton = document.getElementById("checkout-button");
+  checkoutButton.addEventListener("click", function () {
+    fetch('/checkout/')
+    .then(function (result) { return result.json() })
+    .then(function (data) {
+      var stripe = Stripe(data.stripe_public_key);
+
+      stripe.redirectToCheckout({
+        sessionId: data.checkout_session_id
+      }).then(function (result) {
+        // If redirectToCheckout fails due to a browser or network
+        // error, you should display the localized error message to your
+        // customer using error.message.
+        if (result.error) {
+          alert(result.error.message);
+        }
+      })
+        .catch(function (error) {
+          console.error("Error:", error);
+        });
+    })
+  })
+</script>
+
+<script type="text/javascript" src="{% static 'js/inbuiltcheckout.js' %}" ></script>
+
+{% endblock content %}
