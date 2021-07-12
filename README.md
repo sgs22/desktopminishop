@@ -1,4 +1,4 @@
-# desktopminishop - Django / Stripe Payments
+# desktopminishop - Django / Stripe Payments /S3 Buckets
 
 ### System Integrator Website selling a premium desktop computer, built using django python framework and stripe for order/checkout, Hosted using Heroku.
 
