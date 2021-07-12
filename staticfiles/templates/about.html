@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container py-4">
+{% for about in about %}
+    <div class="p-5 mb-4  text-white bg-light rounded-3" style="background-image: linear-gradient(to right, #b87333 0%, #ffb570  100%)">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">{{about.card_main_title}}</h1>
+        <p class="col-md-8 fs-4">{{about.card_main_content}}</p>
+        <!-- <button class="btn btn-grad btn-lg" type="button">Learn more</button> -->
+      </div>
+    </div>
+    <div class="row align-items-md-stretch" style="padding-bottom: 100px;">
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-light rounded-3">
+          <h2>{{about.card_right_title}}</h2>
+          <p>{{about.card_right_content}}</p>
+          <button class="btn btn-grad" type="button">Our Policy</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-white bg-dark rounded-3">
+          <h2>{{about.card_left_title}}</h2>
+          <p>{{about.card_left_content}}</p>
+          <!-- <button class="btn btn-light" type="button">Example button</button> -->
+        </div>
+      </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock content %}

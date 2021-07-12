@@ -10,6 +10,9 @@ django = "*"
 pillow = "*"
 stripe = "*"
 django-environ = "*"
+gunicorn = "*"
+whitenoise = "*"
+django-storages = "*"
 
 [requires]
 python_version = "3.9"

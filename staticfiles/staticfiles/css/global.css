@@ -1,0 +1,218 @@
+/**
+    SCROLL BAR
+*/
+
+/* Remove Horizontal scrolling */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color:rgb(255, 255, 255); ;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(180, 180, 180); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(126, 126, 126);
+}
+
+.cardfeatured {
+  /* box-shadow: 0 16px 48px #bec1c5; */
+  border-radius: calc(1.5rem - 1px);
+  border: none;
+  height: 800px;
+  width: 700px;
+  color: white;
+  background-color: rgb(26, 26, 26);
+}
+
+.imgfeatured {
+  border-radius: calc(1.5rem - 1px);
+}
+
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: .75rem;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.bi-bounding-box-circles {
+  color: #b87333;
+}
+
+body {
+  background: linear-gradient(to right, #e3e3e3 0%, #ffffff 100%);;
+}
+
+.bg-primary {
+  background-color: #b87333;
+}
+/* Gradient Backgrounds - left to right */
+.bg-copper-grad {background-image: linear-gradient(to right, #b87333 0%, #ffb570  100%)}
+.bg-blue-grad {background-image: linear-gradient(to right, #3371b8 0%, #7091ff  100%)}
+.bg-green-grad {background-image: linear-gradient(to right, #198754 0%, #9aff70  100%)}
+.bg-red-grad {background-image: linear-gradient(to right, #b83333 0%, #ff7a59  100%)}
+.bg-silver-grad {background-image: linear-gradient(to right, #535353 0%, #b3b3b3  100%)}
+
+.btn-grad {background-image: linear-gradient(to right, #b87333 0%, #ffb570  51%, #b87333  100%)}
+
+.btn-grad {
+  /* margin: 10px; */
+  /* padding: 5px 5px; */
+  text-align: center;
+  /* text-transform: uppercase; */
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-grad-2 {background-image: linear-gradient(to right, #353535 0%, #5c5c5c  51%, #353535  100%)}
+
+.btn-grad-2 {
+  /* margin: 10px; */
+  /* padding: 5px 5px; */
+  text-align: center;
+  /* text-transform: uppercase; */
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad-2:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+#bar-perf {
+  --labels-size: 100px;
+  border-radius: 100px;
+  height: 150px;
+  max-width: 600px;
+  margin: 0 auto;
+  --color: linear-gradient(to right, #b87333 0%, #ffb570 100%);
+}
+
+/* Gallery CSS */
+*{
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
