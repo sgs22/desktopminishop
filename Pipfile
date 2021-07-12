@@ -12,8 +12,6 @@ stripe = "*"
 django-environ = "*"
 gunicorn = "*"
 whitenoise = "*"
-cloudinary = "*"
-django-cloudinary-storage = "*"
 django-storages = "*"
 
 [requires]
