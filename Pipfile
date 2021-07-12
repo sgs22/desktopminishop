@@ -13,6 +13,7 @@ django-environ = "*"
 gunicorn = "*"
 whitenoise = "*"
 django-storages = "*"
+boto3 = "*"
 
 [requires]
 python_version = "3.9"
