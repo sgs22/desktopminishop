@@ -3,7 +3,6 @@
 ### System Integrator Website selling a premium desktop computer, built using django python framework and stripe for order/checkout, Hosted using Heroku.
 
 ### TODO:
-    - Edit mobile view
     - Add dark mode
     - Include product feature video
     - Enroll in stripe beta for custom domain url checkout
