@@ -13,6 +13,7 @@ django-environ = "*"
 gunicorn = "*"
 whitenoise = "*"
 django-storages = "*"
+dj-database-url = "*"
 
 [requires]
 python_version = "3.9"

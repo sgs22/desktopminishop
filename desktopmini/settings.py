@@ -33,6 +33,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1', '.desktopmini.co.uk']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -86,6 +87,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+import dj_database_url
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES['default'] = dj_database_url.config(default='postgres://qcizndztpcwwxf:e8e9f0ab36b78780d1a2a9a21b2631febf87dc13e110fd5c6a9f25728e216401@ec2-54-74-95-84.eu-west-1.compute.amazonaws.com:5432/df09p14p22jo97'}
+
 
 
 # Password validation
@@ -170,7 +175,7 @@ AWS_QUERYSTRING_AUTH = False
 
 # Force HTTPS 
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = False
 
 
