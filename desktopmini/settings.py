@@ -88,8 +88,8 @@ DATABASES = {
     }
 }
 import dj_database_url
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-DATABASES['default'] = dj_database_url.config(default='postgres://qcizndztpcwwxf:e8e9f0ab36b78780d1a2a9a21b2631febf87dc13e110fd5c6a9f25728e216401@ec2-54-74-95-84.eu-west-1.compute.amazonaws.com:5432/df09p14p22jo97'}
+db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES['default'].update(db_from_env)
 
 
 
