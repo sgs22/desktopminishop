@@ -5,11 +5,17 @@
 
 <div class="mt-5"id="content-wrapper">
     <div class="column">
+        {% if product.featured_img %}
         <div id="img-container">
             <div id="lens"></div>
-            <img id =featured src="{{product.imageUrl}}">
+            <img id=featured src="{{product.imageUrl}}">
         </div>
-
+        {% else %}
+        <div id="img-container">
+          <div id="lens"></div>
+          <img id=featured src="{% static 'img/cameraplaceholder.jpg' %}">
+        </div>
+        {% endif %}
         <div id="slide-wrapper">
             <i id="slideLeft" class="arrow bi bi-arrow-left-circle" style="font-size: 1.5rem;"></i>
             <div id="slider">

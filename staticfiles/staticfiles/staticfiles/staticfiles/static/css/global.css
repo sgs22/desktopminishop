@@ -1,3 +1,43 @@
+/* Medium devices (desktops, 992px and up) */
+@media screen and (max-width: 992px) {
+  .mobpadding-bt {
+    padding-bottom: 12px;
+  }
+  .mobpadding-tp {
+    padding-top: 12px;
+  }
+
+  .mobcaption {
+    padding-bottom: 60px!important;
+  }
+
+  .col-10 {
+    width: 100%;
+  }
+  
+  .column {
+    width: 100%!important;
+    padding: 10px;
+  }
+
+  #featured {
+    max-width: 100%!important;
+    max-height: none!important;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px black;
+    border-radius: 5px;
+  }
+
+  #slide-wrapper {
+    padding-top: 20px;
+    max-width: 500px!important;
+    display: flex;
+    min-height: 100px;
+    align-items: center;
+}
+}
+
 /**
     SCROLL BAR
 */
@@ -58,7 +98,13 @@
 }
 
 body {
-  background: linear-gradient(to right, #e3e3e3 0%, #ffffff 100%);;
+  background: linear-gradient(to right, #e3e3e3 0%, #ffffff 100%);
+  overflow-x: hidden;
+}
+
+html, body {
+	position:relative;
+	overflow-x:hidden;
 }
 
 .bg-primary {
@@ -69,7 +115,7 @@ body {
 .bg-blue-grad {background-image: linear-gradient(to right, #3371b8 0%, #7091ff  100%)}
 .bg-green-grad {background-image: linear-gradient(to right, #198754 0%, #9aff70  100%)}
 .bg-red-grad {background-image: linear-gradient(to right, #b83333 0%, #ff7a59  100%)}
-.bg-silver-grad{background-image: linear-gradient(to right, #535353 0%, #b3b3b3  100%)}
+.bg-silver-grad {background-image: linear-gradient(to right, #535353 0%, #b3b3b3  100%)}
 
 .btn-grad {background-image: linear-gradient(to right, #b87333 0%, #ffb570  51%, #b87333  100%)}
 

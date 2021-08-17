@@ -5,11 +5,17 @@
 
 <div class="mt-5"id="content-wrapper">
     <div class="column">
+        {% if product.featured_img %}
         <div id="img-container">
             <div id="lens"></div>
-            <img id =featured src="{{product.imageUrl}}">
+            <img id=featured src="{{product.imageUrl}}">
         </div>
-
+        {% else %}
+        <div id="img-container">
+          <div id="lens"></div>
+          <img id=featured src="{% static 'img/cameraplaceholder.jpg' %}">
+        </div>
+        {% endif %}
         <div id="slide-wrapper">
             <i id="slideLeft" class="arrow bi bi-arrow-left-circle" style="font-size: 1.5rem;"></i>
             <div id="slider">
@@ -61,6 +67,20 @@
         <small style="display: block; padding-top: 10px;">Quantity can be changed at checkout.</small>
     </div>
   </div>  
+</div>
+
+<div class="container col-xxl-8 px-4">
+  <div class="row flex-lg-row align-items-center g-5 py-5">
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold lh-1 mb-3">View in Augmented Reality:</h1>
+    </div>
+    <div class="col-lg-6">
+      <a href="{% static 'ar/model.usdz' %}" rel="ar">
+        <img src="{% static 'img/cameraplaceholder.jpg' %}">
+      </a>
+    </div>
+    
+  </div>
 </div>
 
 <div class="container col-xxl-8 px-4">

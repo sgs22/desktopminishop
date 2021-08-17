@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container col-xxl-8 px-4 py-3">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="{% static 'img/side.png' %}" class="d-block mx-lg-auto img-fluid" alt="DesktopMini FrontImage"
+        width="700" height="600" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold lh-1 mb-3">The Silent Aluminum Desktop</h1>
+      <p class="lead">The Desktop Mini is a premium industrial-styled computer design for completely silent operation.
+        Perfect for home office, video editing, sound mixing, and home theater use cases. Made with sandblasted aluminum
+        in a clean silver or matte black.</p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-grad btn-lg px-4" onclick="javascript:animateScroll()">Take a look</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="featured-3">
+  <h2 class="pb-2 border-bottom">Features</h2>
+  <div class="row g-5 py-5">
+    <div class="feature col-md-4">
+      <div class="feature-icon bg-copper-grad">
+        <svg class="bi bi-volume-mute" xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor"
+          class="bi bi-volume-mute" viewBox="0 0 16 16">
+          <path
+            d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04 4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04zm7.854.606a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z" />
+        </svg>
+        </svg>
+      </div>
+      <h2>Dead Silent</h2>
+      <p>Operating with no fans in the chassis, no matter the workload it's quieter than a whisper yet boasts the same perfomance as a large desktop.</p>
+    </div>
+    <div class="feature col-md-4">
+      <div class="feature-icon bg-copper-grad">
+        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-palette2"
+          viewBox="0 0 16 16">
+          <path
+            d="M0 .5A.5.5 0 0 1 .5 0h5a.5.5 0 0 1 .5.5v5.277l4.147-4.131a.5.5 0 0 1 .707 0l3.535 3.536a.5.5 0 0 1 0 .708L10.261 10H15.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5H3a2.99 2.99 0 0 1-2.121-.879A2.99 2.99 0 0 1 0 13.044m6-.21 7.328-7.3-2.829-2.828L6 7.188v5.647zM4.5 13a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0zM15 15v-4H9.258l-4.015 4H15zM0 .5v12.495V.5z" />
+          <path d="M0 12.995V13a3.07 3.07 0 0 0 0-.005z" />
+        </svg>
+      </div>
+      <h2>Industrial Design</h2>
+      <p>Designed specifically to fit into any enviornment, the Desktop Mini offers a timeless offering for any household or office space.</p>
+    </div>
+    <div class="feature col-md-4">
+      <div class="feature-icon bg-copper-grad">
+        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-wallet2"
+          viewBox="0 0 16 16">
+          <path
+            d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z" />
+        </svg>
+      </div>
+      <h2>Competitively Priced</h2>
+      <p>The Desktop Mini is priced less than any modern small PC, whilst being in a complete different class of high-end computing.</p>
+    </div>
+  </div>
+</div>
+
+<div data-aos="" data-aos-duration="3000">
+  <div class="container col-xxl-8 px-4">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">The Perfect Size</h1>
+        <p class="lead">The Desktop Mini is sized so that is suitable to sit on the desk yet still hold modular parts for future proofing and repariability.
+          the chassis has been designed to stand out and act as a feature within your work space.
+        </p>
+      </div>
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{% static 'img/desktopmini_size.png' %}" class="d-block mx-lg-auto img-fluid"
+          alt="DesktopMini FrontImage" width="700" height="600" loading="lazy" style="border-radius: 5px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div data-aos="" data-aos-duration="3000">
+  <div class="container col-xxl-8 px-4">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <table id="bar-perf" class="charts-css bar data-spacing-15 show-labels show-heading">
+          <caption> CPU Performance (Multi-Core - Cinebench R23) </caption>
+          <tbody>
+            <tr>
+              <th scope="row">Mac Mini (M1)</th>
+              <td style="--size:0.75; border-radius: 1rem;" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="50">
+                <span class="data" style="color: white; padding-right: 10px;"> 7508 </span></td>
+            <tr>
+              <th scope="row"> Desktop Mini </th>
+              <td style="--size:0.93; border-radius: 1rem;" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="500">
+                <span class="data" style="color: white; padding-right: 10px;"> 9314 </span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Pure Performance</h1>
+        <p class="lead">The Desktop Mini utilises brand new CPU architecture and UHD Graphics to provide incredible speeds in both single and multi-core
+          use cases. Rivaling the new Apple M1 chip in multi-core performance whilst using less than 40 watts of power draw in a typical work load.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div data-aos="" data-aos-duration="3000">
+  <div class="container col-xxl-8 px-4">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Passively Cooled</h1>
+        <p class="lead">The Desktop Mini is a niche approach to computer design. It doesn't feature any moving parts thanks to
+          its passively cooled design, the heat generated by the processor is transferred to the large finned panel that 
+          naturally dissipates the heat resulting in increased longevity and prolonged life.</p>
+      </div>
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{% static 'img/desktopmini_horizontal.png' %}" class="d-block mx-lg-auto img-fluid"
+          alt="DesktopMini FrontImage" width="700" height="600" loading="lazy" style="border-radius: 5px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container py-4">
+  <div data-aos="zoom-in" data-aos-duration="3000">
+      <div class="p-5 mb-4 text-white bg-copper-grad bg-light rounded-3">
+        <div class="row container-fluid py-5">
+          <h1 class="display-5 fw-bold">It’s Time Someone Brought Premium to Windows. </h1>
+          <p class="col-md-6 fs-4">The Desktop Mini has integrated CPU and GPU for optimal power efficiency and performance.</p>
+          <!-- <p class="col-md-6 fs-4" style="text-align: center;"><i class="bi bi-speedometer2" style=" font-size: 6rem;"></i></p> -->
+          <!-- <button class="btn btn-grad btn-lg" type="button">Learn more</button> -->
+        </div>
+      </div>
+  </div>
+      <div class="row align-items-md-stretch">
+        <div class="col-md-4" data-aos="fade-right" data-aos-duration="3000">
+          <div class="h-100 p-5 text-white bg-blue-grad bg-light rounded-3">
+            <h2>Windows 10 Pro.</h2>
+            <p>Fully licensed Windows 10 Pro, no bloatware just a seemless experience. <strong>Compatability, familiarity, Windows.</strong></p>
+            <a class="btn btn-light" type="button" href="https://www.microsoft.com/en-gb/windows/compare-windows-10-home-vs-pro" target="_blank">Windows 10</a>
+          </div>
+        </div>
+        <div class="col-md-8" data-aos="fade-left" data-aos-duration="3000">
+          <div class="h-100 p-5 text-white bg-dark rounded-3">
+            <h2>6-Core CPU</h2>
+            <ul>
+              <li>Up to 4.4GHz max clock speed</li>
+              <li>Intel® Turbo Boost</li>
+              <li>Intel® Smart Cache: 12M</li>
+            </ul>
+            <p>The right balance of clock speed and core performance gets more from your desktop, whether your watching films in HDR or Rendering 3D CAD.</p>
+            <!-- <button class="btn btn-light" type="button">Example button</button> -->
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <div class="container py-4" style="padding-top: 0px!important;">
+    <div class="p-5 mb-4 text-white bg-green-grad bg-dark rounded-3" data-aos="zoom-in" data-aos-duration="3000">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Right to Repair limiting Electronic Waste.</h1>
+        <p class="col-md-8 fs-4">We fully support our customers to be able to repair their device. <br> Desktop Mini uses standard parts so it can be repaired and upgraded easily for the future.</p>
+      </div>
+    </div>
+
+    <div class="row align-items-md-stretch" style="padding-bottom: 100px;">
+      <div class="col-md-8" data-aos="fade-right" data-aos-duration="3000">
+        <div class="h-100 p-5 text-white bg-dark rounded-3">
+          <h2>Fully Modular. Future Proof.</h2>
+          <p>We use high grade off-the-shelf parts and not proprietary hardware, this means that you have control of the future of your product not us.</p>
+          <a class="btn btn-light" href="{% url 'overview' %}" type="button">See Specs</a>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-left" data-aos-duration="3000">
+        <div class="h-100 p-5 text-white bg-red-grad bg-dark rounded-3">
+          <h2>NVMe™ SSD Storage</h2>
+          <p>Desktop Mini features PCIe Storage - Speeds with reads up to 3.5GB/s and writes up to 3GB/s. Over 5x the speed of a typical PC.</p>
+          <!-- <button class="btn btn-light" type="button">Example button</button> -->
+        </div>
+      </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+  function animateScroll() {
+    window.scroll({ top: 2200, left: 0, behavior: 'smooth' });
+  }
+</script>
+
+
+{% endblock content %}
