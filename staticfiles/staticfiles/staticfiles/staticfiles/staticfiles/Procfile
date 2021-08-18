@@ -1,0 +1,1 @@
+web: gunicorn desktopmini.wsgi

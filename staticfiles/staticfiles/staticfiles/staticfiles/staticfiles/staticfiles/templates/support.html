@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+<div class="container py-4">
+  <div class="row align-items-md-stretch" style="padding-bottom: 24px;">
+    <div class="col-md-6" data-aos="" data-aos-duration="3000">
+      <div class="h-100 p-5 mb-4 text-white bg-copper-grad bg-dark rounded-3">
+        <h2>Desktop Mini Support</h2>
+        <p>Please find the section best suited for the type of support you require.</p>
+        
+      </div>
+    </div>
+    <div class="col-md-6" data-aos="" data-aos-duration="3000">
+      <div class="h-100 p-5 mb-4 text-white bg-blue-grad bg-light rounded-3">
+        <h2>Frequent Answers & Questions</h2>
+        <p>Our most frequent questions asked about our products and services.</p>
+        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ModalFAQ">
+          See More
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row align-items-md-stretch" style="padding-bottom: 24px;">
+    <div class="col-md-6" data-aos="" data-aos-duration="3000">
+      <div class="h-100 p-5 mb-4 text-white bg-green-grad bg-dark rounded-3">
+        <h2>Troubleshooting</h2>
+        <p>General Desktop Mini troubleshooting solutions all in one place.</p>
+        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ModalTroubleshooting">
+          See More
+        </button>
+      </div>
+    </div>
+    <div class="col-md-6" data-aos="" data-aos-duration="3000">
+      <div class="h-100 p-5 mb-4 text-white bg-silver-grad bg-light rounded-3">
+        <h2>Warranty & Services</h2>
+        <p>Review your Desktop Mini warranty status and eligibility to purchase additional coverage.</p>
+        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ModalWarranty">
+          Check Warranty
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row align-items-md-stretch" style="padding-bottom: 24px;">
+    <div class="col-md-6" data-aos="" data-aos-duration="3000">
+      <div class="h-100 p-5 mb-4 text-white bg-dark rounded-3">
+        <h2>Drivers & Software</h2>
+        <p>In case of any future issues we have provided a package for all Desktop Mini applications and drivers through our download page.</p>
+        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ModalDownload">
+          Download page
+        </button>
+      </div>
+    </div>
+    <div class="col-md-6" data-aos="" data-aos-duration="3000">
+      <div class="h-100 p-5 mb-4 text-white bg-red-grad bg-light rounded-3">
+        <h2>Repair Status</h2>
+        <p>Check here and login to get an update on the repair / Upgrade status of your Desktop Mini.</p>
+        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ModalRepair">
+          Check Status
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">Contact</h1>
+      <p class="col-md-8 fs-4">Please let us know if you have any questions or quieries, drop us email with the link below.</p>
+      <div class="d-flex justify-content-center ">
+        <form action="mailto:contact@desktopmini.co.uk" method="get" enctype="text/plain">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Full Name">
+          </div>
+          <div class="form-group">
+            <label for="email" style="padding-top: 10px;">Email address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="comments" style="padding-top: 10px;">Message</label>
+            <textarea type="text" class="form-control" id="comments" rows="12" cols="45" placeholder="How can we help?"></textarea>
+          </div>
+          <br>
+          <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include "model.html" %}
+
+
+
+{% endblock content %}
+
+
+

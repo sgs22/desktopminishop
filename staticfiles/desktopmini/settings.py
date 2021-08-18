@@ -33,6 +33,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1', '.desktopmini.co.uk']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,8 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cloudinary',
-    'cloudinary_storage',
     'shop',
 ]
 
@@ -88,6 +87,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES['default'].update(db_from_env)
+
 
 
 # Password validation
@@ -143,6 +146,7 @@ MEDIA_ROOT = BASE_DIR / "media_cdn"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -152,13 +156,26 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STRIPE_PUBLIC_KEY = env("STRIPE_PUBLIC_KEY")
 STRIPE_SECRET_KEY = env("STRIPE_SECRET_KEY")
 
-# cloudinary
+# AWS S3
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': env('CLOUD_NAME'),
-    'API_KEY': env('API_KEY'),
-    'API_SECRET': env('API_SECRET'),
-}
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
+AWS_QUERYSTRING_AUTH = False
+
+# # cloudinary
+
+# CLOUDINARY_STORAGE = {
+#     'CLOUD_NAME': env('CLOUD_NAME'),
+#     'API_KEY': env('API_KEY'),
+#     'API_SECRET': env('API_SECRET'),
+# }
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+# Force HTTPS 
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
 
 

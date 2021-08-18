@@ -1,13 +1,46 @@
+/* Medium devices (desktops, 992px and up) */
+@media screen and (max-width: 992px) {
+  .mobpadding-bt {
+    padding-bottom: 12px;
+  }
+  .mobpadding-tp {
+    padding-top: 12px;
+  }
+
+  .mobcaption {
+    padding-bottom: 60px!important;
+  }
+
+  .col-10 {
+    width: 100%;
+  }
+  
+  .column {
+    width: 100%!important;
+    padding: 10px;
+  }
+
+  #featured {
+    max-width: 100%!important;
+    max-height: none!important;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px black;
+    border-radius: 5px;
+  }
+
+  #slide-wrapper {
+    padding-top: 20px;
+    max-width: 500px!important;
+    display: flex;
+    min-height: 100px;
+    align-items: center;
+}
+}
+
 /**
     SCROLL BAR
 */
-
-/* Remove Horizontal scrolling */
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -65,7 +98,13 @@ body {
 }
 
 body {
-  background: linear-gradient(to right, #e3e3e3 0%, #ffffff 100%);;
+  background: linear-gradient(to right, #e3e3e3 0%, #ffffff 100%);
+  overflow-x: hidden;
+}
+
+html, body {
+	position:relative;
+	overflow-x:hidden;
 }
 
 .bg-primary {
@@ -81,46 +120,46 @@ body {
 .btn-grad {background-image: linear-gradient(to right, #b87333 0%, #ffb570  51%, #b87333  100%)}
 
 .btn-grad {
-  /* margin: 10px; */
-  /* padding: 5px 5px; */
-  text-align: center;
-  /* text-transform: uppercase; */
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;            
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
+   /* margin: 10px; */
+   /* padding: 5px 5px; */
+   text-align: center;
+   /* text-transform: uppercase; */
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
 
-.btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-}
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
 
-.btn-grad-2 {background-image: linear-gradient(to right, #353535 0%, #5c5c5c  51%, #353535  100%)}
+ .btn-grad-2 {background-image: linear-gradient(to right, #353535 0%, #5c5c5c  51%, #353535  100%)}
 
-.btn-grad-2 {
-  /* margin: 10px; */
-  /* padding: 5px 5px; */
-  text-align: center;
-  /* text-transform: uppercase; */
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;            
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
+ .btn-grad-2 {
+   /* margin: 10px; */
+   /* padding: 5px 5px; */
+   text-align: center;
+   /* text-transform: uppercase; */
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
 
-.btn-grad-2:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-}
+ .btn-grad-2:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
 
-#bar-perf {
+ #bar-perf {
   --labels-size: 100px;
   border-radius: 100px;
   height: 150px;
@@ -129,90 +168,90 @@ body {
   --color: linear-gradient(to right, #b87333 0%, #ffb570 100%);
 }
 
-/* Gallery CSS */
-*{
-  box-sizing: border-box;
-}
+ /* Gallery CSS */
+  *{
+    box-sizing: border-box;
+  }
 
-/* Position the image container (needed to position the left and right arrows) */
-.container {
-  position: relative;
-}
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
 
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
 
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
 
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 16.66%;
-}
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
 
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
 
-.active,
-.demo:hover {
-  opacity: 1;
-}
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
