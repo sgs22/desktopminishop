@@ -15,6 +15,7 @@ whitenoise = "*"
 django-storages = "*"
 dj-database-url = "*"
 psycopg2-binary = "*"
+boto3 = "*"
 
 [requires]
 python_version = "3.9"
