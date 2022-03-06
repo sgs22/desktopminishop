@@ -6,6 +6,7 @@ from django.urls import reverse
 from django.views.generic import TemplateView
 from django.views.decorators.csrf import csrf_exempt
 from .forms import SupportForm
+from django.contrib import messages
 
 from .models import Product, About
 
