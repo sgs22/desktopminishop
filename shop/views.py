@@ -31,7 +31,7 @@ def support_view(request, *args, **kwargs):
     form = SupportForm(request.POST or None)
     if form.is_valid():
         form.save()
-        messages.success(request, 'Form submission successful')
+        messages.success(request, 'We have recieved your support query, we will get back to you as soon as we can.')
     return render(request, "support.html", {"form": form})
 
 class SuccessView(TemplateView):
