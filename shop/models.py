@@ -66,3 +66,9 @@ class About(models.Model):
 
     def __str__(self):
         return self.card_main_title
+
+class SupportTickets(models.Model):
+    name = models.CharField(max_length=120, blank=False)
+    email = models.EmailField(blank=False)
+    message = models.TextField(blank=False)
+

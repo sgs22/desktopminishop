@@ -5,6 +5,7 @@ from django.views import View
 from django.urls import reverse
 from django.views.generic import TemplateView
 from django.views.decorators.csrf import csrf_exempt
+from .forms import SupportForm
 
 from .models import Product, About
 
@@ -26,7 +27,10 @@ def about_view(request, *args, **kwargs):
     return render(request, "about.html", {"about": queryset})
 
 def support_view(request, *args, **kwargs):
-    return render(request, "support.html")
+    form = SupportForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    return render(request, "support.html", {"form": form})
 
 class SuccessView(TemplateView):
     template_name = "success.html"
