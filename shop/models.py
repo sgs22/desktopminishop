@@ -72,3 +72,9 @@ class SupportTickets(models.Model):
     email = models.EmailField(blank=False)
     message = models.TextField(blank=False)
 
+    class Meta:
+        verbose_name = "Support Ticket"
+    
+    def __str__(self):
+        return self.name
+
