@@ -6,6 +6,7 @@
     - Safari / macOS AR Quick Look. 
     - Stripe API for managing orders and payments.
     - Bootstrap5, Django 3.x, ARKit
+    - Django Forms / Messages for support requests.
 
 ### TODO:
     - Add dark mode
